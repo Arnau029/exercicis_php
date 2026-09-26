@@ -57,7 +57,9 @@ main {
     border-top: 1px solid #ddd;
     padding-top: 15px;
 }
-
+.descuent{
+    color: red;
+}
 .estoc {
     color: green;
     font-weight: bold;

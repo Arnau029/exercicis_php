@@ -1,13 +1,15 @@
 <?php
-    $preu = 99.99;
-
     const IVA = 1.21;
-    const botiga = "Tineda online guay";
-    const descompte_soxi = 1.20;
+    const BOTIGA = "Carrer de la flor";
+    const DESCOPMTE_SOCI = 0.60;
+    const MONEDA = "€";
 
-    const moneda = "€";
+    $nomproducto = "Camiseta GUAY";
+
+    $desc = "Camiseta chupi chupi guay";
     $ref = "CAM-1325376";
     $stock = 5;
+    $preu = 99.99;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -19,8 +21,8 @@
 </head>
 <body>
     <header>
-        <h1><?=botiga?></h1>
-        <p>Esto es una tineda online guay</p>
+        <h1>Tineda online guay</h1>
+        <p><?=BOTIGA?></p>
     </header>
 
     <main>
@@ -30,13 +32,13 @@
             const moneda = "$";
         ?>-->
         <article class="producte">
-            <h2>Camiseta GUAY</h2>
-            <p class="descripcio">Camiseta chupi chupi guay</p>
-            <p class="preu">Preu sense IVA: <?=$preu,moneda?></p>
+            <h2><?= $nomproducto?></h2>
+            <p class="descripcio"><?= $desc?></p>
+            <p class="preu">Preu sense IVA: <?=$preu,MONEDA?></p>
             <p class="preu">IVA (21%): MUCHO</p>
             <!--number format le decimos lo que quermos y por lo que quermos cambiar en este caso el . por la , -->
-            <p class="total">TOTAL: <?= number_format($preu * IVA, 2, ',', '.') . moneda ?></p>
-
+            <p class="total">TOTAL: <?= number_format($preu * IVA, 2, ',', '.') . MONEDA ?></p>
+            <p class="descuent">Precio socio: <?= number_format($preu * DESCOPMTE_SOCI * IVA,2, ',', '.') ?> </p>
             <p class="estoc">Unitats disponibles <?=$stock?> </p>
             <p class="ref"><?= $ref?></p>
         </article>
