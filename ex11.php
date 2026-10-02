@@ -53,7 +53,7 @@
     $antiga = "es facil";
     $nova = "no es dificl";
 
-    echo "ejemplo str_replace: " . str_replace($antiga, $nova, $cadena) . "<br>"
+    echo "ejemplo str_replace: " . str_replace($antiga, $nova, $cadena) . "<br>";
 
     // ereg_replace / eregi_replace()
 
@@ -64,20 +64,28 @@
     // explode: permet dividir una cadena segons una caracter o patro
 
     //exercici 1: busca en php.net la funcio: str_word_count() y pon un ejemplo
+        $texto = "Hola, me gusta programar en PHP";
 
+        echo str_word_count($texto);
     //exercici 2: busca en php.net la funcio levenshtein() y pon un ejemplo
-
+        $string1 = "Hola";
+        $string2 = "HOLAAAAAAH";
+        $lev = levenshtein($string1,$string2);
+        echo $lev;
     //exercici 3: busca que es el operador ternario y pon un ejemplo
+        $edad = 18;
 
+        $resultado = $edad >= 18 ? "És major d'edat" : "És menor d'edat";
+
+        echo $resultado;
     //exercici 4: Explicar que hace esta funcion:
 
-    function funcionMultipleReturns($v1,$v2,$v3){
-        $v1 = "Variable1";
-        $v2 = "Variable2";
-        $v3 = "Variable3";
-
-        return array($v1,$v2,$v3);
-    }
+    // function funcionMultipleReturns($v1,$v2,$v3){
+    //     $v1 = "Variable1";
+    //     $v2 = "Variable2";
+    //     $v3 = "Variable3";
+    //     return array($v1,$v2,$v3);
+    // }
 
 
 
