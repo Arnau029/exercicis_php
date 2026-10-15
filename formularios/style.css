@@ -1,0 +1,105 @@
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFFDF7;
+        /* Fondo con puntitos estilo póster */
+        background-image: radial-gradient(#111 1.25px, transparent 1.25px);
+        background-size: 24px 24px;
+        padding: 20px;
+        color: #111;
+    }
+
+    /* Título estilo pegatina */
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: #FFDE00;
+        border: 3px solid #111;
+        padding: 10px 22px;
+        box-shadow: 6px 6px 0px #111;
+        margin-bottom: 28px;
+        transform: rotate(-2deg);
+        text-align: center;
+        letter-spacing: -0.5px;
+    }
+
+    /* Tarjeta estilo entrada / cartel */
+    form {
+        background: #ffffff;
+        border: 3px solid #111;
+        border-radius: 16px;
+        padding: 35px 30px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 10px 10px 0px #111;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 14px 16px;
+        margin-bottom: 22px;
+        background: #F4F4F0;
+        border: 2.5px solid #111;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #111;
+        outline: none;
+        transition: all 0.15s ease;
+    }
+
+    /* Efecto al escribir */
+    input:focus, select:focus {
+        background: #ffffff;
+        box-shadow: 4px 4px 0px #7B61FF;
+        transform: translate(-2px, -2px);
+    }
+
+    /* Botón con efecto físico al pulsar */
+    button {
+        margin-top: 8px;
+        padding: 16px;
+        background: #FF5C00;
+        color: #ffffff;
+        border: 3px solid #111;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        box-shadow: 5px 5px 0px #111;
+        transition: all 0.12s ease;
+    }
+
+    button:hover {
+        background: #7B61FF;
+        transform: translate(-2px, -2px);
+        box-shadow: 7px 7px 0px #111;
+    }
+
+    button:active {
+        transform: translate(5px, 5px);
+        box-shadow: 0px 0px 0px #111;
+    }
