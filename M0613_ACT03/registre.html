@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Registre</title>
+    <link rel="stylesheet" href="estils.css">
+</head>
+<body>
+    <h2>Registre d'usuari</h2>
+    <form action="processa.php" method="post">
+        <fieldset>
+            <legend>Nombres</legend>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom">
+            <br>
+            <label for="cognom">Apellido</label>
+            <input type="text" id="cognom" name="cognom">
+            <br>
+            <label for="naixement">Fecha de nacimiento</label>
+            <input type="date" id="naixement" name="naixement">
+            <br>
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Dades del compte</legend>
+            <label for="correu">Correu electrònic</label>
+            <input type="email" id="correu" name="correu">
+            <br>
+            <label for="usuari">Nom d'usuari</label>
+            <input type="text" id="usuari" name="usuari">
+            <br>
+            <label for="pass">Contrasenya</label>
+            <input type="password" id="pass" name="pass">
+            <br>
+            <label for="pass2">Repeteix la contrasenya</label>
+            <input type="password" id="pass2" name="pass2">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Adreça</legend>
+            <label for="carrer">Carrer i número</label>
+            <input type="text" id="carrer" name="carrer">
+            <br>
+            <label for="poblacio">Població</label>
+            <input type="text" id="poblacio" name="poblacio">
+            <br>
+            <label for="codi_postal">Codi postal</label>
+            <input type="text" id="codi_postal" name="codi_postal">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Preferències</legend>
+            <label for="tipus_client">Tipus de client</label>
+            <select id="tipus_client" name="tipus_client">
+                <option value="">Selecciona una opció</option>
+                <option value="particular">Particular</option>
+                <option value="empresa">Empresa</option>
+                <option value="estudiant">Estudiant</option>
+            </select>
+            <p>Com ens has conegut?</p>
+            <label><input type="radio" name="origen" value="xarxes">Xarxes socials</label>
+            <br>
+
+            <label><input type="radio" name="origen" value="amics">Un amic o amiga</label>
+            <br>
+
+            <label><input type="radio" name="origen" value="cercador">Cercador d'Internet</label>
+            <br>
+
+            <label><input type="checkbox" name="butlleti" value="si">Vull rebre ofertes</label>
+            <br>
+
+            <label><input type="checkbox" name="condicions" value="si">Accepto les condicions</label>
+        </fieldset>
+        <br>
+        <button type="submit">Crear el compte</button>
+    </form>
+</body>
+</html>
