@@ -1,0 +1,27 @@
+body {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.graella:has(> .targeta) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    gap: 1rem;
+}
+
+.targeta {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.targeta h3 {
+    margin-top: 0;
+}
+
+.targeta p:last-child {
+    margin-bottom: 0;
+}
