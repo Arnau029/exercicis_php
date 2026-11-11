@@ -1,0 +1,49 @@
+Modular codigo
+
+warning 
+include failed to opening dor inclusion
+requier fatal error uncaught error 
+
+
+include | avisa i continua | si el fitexer es opcional
+require | avisa i s'atura | si sense el fitxer la pagina no te sentit 
+
+
+quina faig servit ---
+config.php  | rquiere_once | constants i valors fixos. nomes una vegada
+funcions.php | require_once | si es declara dues vegades, error fatal
+capcalera.php | require | sense dissent la pagina no serveix
+peu.php | require | igual que la capcalera 
+un bloc opcional | include | un banner, un avis si falta tant se valors
+
+les variables travessen l'include 
+si tenemos dos archivos por exemplo normalmente hacemos la declaracion de variable y despues la llamamos pero si ya lo tenemos
+en un archivo podemos llamarlo en otro sin necesidad de declararlo 
+
+el patro ---
+config.php | valors es fan servir en mas de un sitio ejemplo nombre midas rutas. no escribenada en la pantalla
+funciones.php | todas las funciones propias juntas . tampoco escribre nada a la pantalla
+capcalera.php | des del doctype find a la pbertura del main el titol li arriba per $titolpagina
+peu.php | el tacament del main el peu de la pagina y el tacamnet del html
+
+com queda el projecte --- 
+
+config.php 
+
+php
+require_once 
+$titolpagina = "gracias";
+require 'capcalera.php';
+?>
+<....>
+require 'peu.php';
+
+una cosa que no s'ha de fer mai ---- 
+//mai 
+include $_get['pagina'] . ' .php''
+
+si has de triar la pagina segons un parametre 
+$permes = ['inici', 'contacte', 'ajuda'];
+$pagina = $_get['pagina'] ?? 'inici';
+
+if(in_array($pagina,$permes, true)){ require $pagina . '.php';}
